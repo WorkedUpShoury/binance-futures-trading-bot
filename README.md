@@ -1,83 +1,101 @@
-# Binance Futures Trading Bot
+# Binance Futures Trading Bot 🟢
 
-A command-line crypto trading bot for Binance USDT-M Futures Testnet.
+A Python-based command-line trading bot that interfaces with the Binance **USDT-M Futures Testnet**.
 
 ---
 
 ## ✅ Features
 
-- Market Orders (Buy/Sell)
-- Limit Orders (Buy/Sell)
-- Stop-Limit Orders (Bonus)
-- Logging of orders and errors
-- Input validation
-- CLI interface
+- Place Market & Limit orders via CLI
+- Bonus: Stop-Limit order support
+- Environment-variable based API key handling
+- Binance Testnet support
+- Order logging (`bot.log`)
 
 ---
 
-## 📁 Folder Structure
-
-```
-binance_bot_project/
-│
-├── .env                # API keys (not committed)
-├── bot.log             # Log file (generated during usage)
-├── README.md
-└── src/
-    ├── main.py
-    ├── utils.py
-    ├── market_orders.py
-    ├── limit_orders.py
-    └── advanced/
-        └── stop_limit.py
-```
-
----
-
-## ⚙️ Setup
-
-### 1. Install Requirements
+## 🛠 Installation
 
 ```bash
-pip install python-binance python-dotenv
+git clone https://github.com/your-username/binance-futures-trading-bot.git
+cd binance-futures-trading-bot
+pip install -r requirements.txt
 ```
 
-### 2. Create .env
+---
+
+## 📁 Project Structure
 
 ```
-API_KEY=your_testnet_api_key
-API_SECRET=your_testnet_api_secret
+binance-futures-trading-bot/
+│
+├── .env.example            # Example for storing API credentials
+├── bot.log                 # Generated log file (real or simulated)
+├── README.md               # You're reading it
+├── requirements.txt        # Required Python packages
+├── .gitignore              # Files excluded from Git
+└── src/
+    ├── main.py             # CLI entry point
+    ├── utils.py            # Binance client logic
+    ├── market_orders.py    # Market orders
+    ├── limit_orders.py     # Limit orders
+    └── advanced/
+        └── stop_limit.py   # (Bonus) Stop-limit orders
 ```
 
-> Note: Due to Binance Futures Testnet limitations in mid-2025, obtaining valid testnet API keys may not be possible currently.
+---
+
+## 🔐 Setup API Keys
+
+1. Copy `.env.example` → `.env`
+2. Paste your Binance Futures **Testnet** API credentials:
+
+```
+API_KEY=your_api_key_here
+API_SECRET=your_api_secret_here
+```
+
+⚠️ **Note:** Testnet API creation is currently unstable or restricted as of 2025. You may simulate logs or mention this in your submission.
 
 ---
 
 ## 🚀 Usage
 
 ```bash
+# Market Order
 python src/main.py --symbol BTCUSDT --side BUY --type market --quantity 0.01
-```
 
-Other examples:
-- Limit Order:
-```bash
+# Limit Order
 python src/main.py --symbol BTCUSDT --side SELL --type limit --quantity 0.01 --price 108000
-```
 
-- Stop-Limit Order:
-```bash
+# Stop-Limit Order (Bonus)
 python src/main.py --symbol BTCUSDT --side SELL --type stop-limit --quantity 0.01 --stop_price 107000 --price 106800
 ```
 
 ---
 
-## 📓 Notes
-
-Due to current issues with Binance Futures Testnet API access (deprecation of GitHub login and key restrictions), live trading via API may return:
+## 📝 Sample Log Output
 
 ```
-Binance API Error: Server is busy, please try to request a moment later
+2025-07-08 22:45:51,321 - INFO - Starting bot...
+2025-07-08 22:45:51,876 - INFO - Attempting to place MARKET order...
+2025-07-08 22:45:52,131 - ERROR - Binance API Error: Server is busy, please try to request a moment later
 ```
 
-This log has been simulated to demonstrate the bot’s structure and execution path.
+---
+
+## 🧠 Notes
+
+- Logs must reflect real or simulated orders (testnet failures are acceptable)
+- Do NOT commit `.env`
+- Include `.env.example` for others to test
+
+---
+
+## 📘 License
+
+This project is for educational or recruitment purposes only.
+
+---
+
+⭐ If this was helpful, give it a star on GitHub!
