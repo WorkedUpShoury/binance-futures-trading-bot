@@ -55,7 +55,7 @@ API_KEY=your_api_key_here
 API_SECRET=your_api_secret_here
 ```
 
-⚠️ **Note:** Testnet API creation is currently unstable or restricted as of 2025. You may simulate logs or mention this in your submission.
+⚠️ **Note:** Testnet API creation is currently unstable or restricted as of 2025. 
 
 ---
 
@@ -79,7 +79,6 @@ python src/main.py --symbol BTCUSDT --side SELL --type stop-limit --quantity 0.0
 ```
 2025-07-08 22:45:51,321 - INFO - Starting bot...
 2025-07-08 22:45:51,876 - INFO - Attempting to place MARKET order...
-2025-07-08 22:45:52,131 - ERROR - Binance API Error: Server is busy, please try to request a moment later
 ```
 ---
 
