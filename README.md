@@ -81,20 +81,11 @@ python src/main.py --symbol BTCUSDT --side SELL --type stop-limit --quantity 0.0
 2025-07-08 22:45:51,876 - INFO - Attempting to place MARKET order...
 2025-07-08 22:45:52,131 - ERROR - Binance API Error: Server is busy, please try to request a moment later
 ```
-
----
-
-## 🧠 Notes
-
-- Logs must reflect real or simulated orders (testnet failures are acceptable)
-- Do NOT commit `.env`
-- Include `.env.example` for others to test
-
 ---
 
 ## 📘 License
 
-This project is for educational or recruitment purposes only.
+This project is for educational purposes only.
 
 ---
 
