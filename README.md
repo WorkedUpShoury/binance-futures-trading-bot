@@ -1,4 +1,4 @@
-# Binance Futures Trading Bot 🟢
+# Binance Futures Trading Bot 
 
 A Python-based command-line trading bot that interfaces with the Binance **USDT-M Futures Testnet**.
 
